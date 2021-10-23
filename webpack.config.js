@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: "",
   },
 
   resolve: {
@@ -43,7 +43,9 @@ module.exports = {
       name: "remote_auth_frontend",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./Test": "./src/Test.tsx",
+      },
       shared: {
         ...deps,
         "solid-js": {

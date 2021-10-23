@@ -1,13 +1,11 @@
 import { render } from "solid-js/web";
 
+import Test from "./Test";
 import "./index.scss";
 
 const App = () => (
   <div class="mt-10 text-3xl mx-auto max-w-6xl">
-    <div>Name: remote-auth-frontend</div>
-    <div>Framework: solid-js</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Tailwind</div>
+    <Test />
   </div>
 );
 render(App, document.getElementById("app"));
